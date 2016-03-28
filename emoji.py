@@ -1,9 +1,15 @@
 import markovify
 
-with open("corpus.txt") as f:
-	text = f.read()
+def generate():
+	with open('corpus.txt') as f:
+		text = f.read()
+	model = markovify.Text(text)
+	gen = ''
+	for i in range(14):
+		sentence = model.make_sentence()
+		if sentence != None:
+			gen += sentence
+	return gen
 
-model = markovify.Text(text)
-
-for i in range(5):
-	print(model.make_sentence())
+if __name__ == '__main__':
+	print(generate())

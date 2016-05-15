@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Emojipasta</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        function gen_s(){
+            $.get("gen/s/112", function(data){
+                $("#main").html(data);
+				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0Avia http://emojipasta.club');
+            });
+        }
+        gen_s();
+        </script>
+    </head>
+    <body>
+        <div id="title">emojipasta.club</div>
+        <div id="main" class="emoji-text">
+        </div>
+        <div id="controls">
+            <input type="button" class="button" onclick="gen_s();" value="new shitpost" />
+            <a id="tweet-button" class="button" target="_blank">tweet</a>
+        </div>
+    </body>
+</html>

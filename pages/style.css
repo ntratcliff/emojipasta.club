@@ -25,6 +25,13 @@ body{
     text-align: center;
 }
 
+#shitpost-count{
+	position: absolute;
+	bottom: 0.2em;
+	width: 100%;
+	text-align: center;
+}
+
 .emoji-text{
     font-family: sans-serif;
 }

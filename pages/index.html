@@ -10,6 +10,11 @@
                 $("#main").html(data);
 				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0Avia http://emojipasta.club');
             });
+
+			//get shitpost count
+			$.get("gen/c/", function(data){
+				$("#counter").html(data);
+			});
         }
         gen_s();
         </script>
@@ -22,5 +27,6 @@
             <input type="button" class="button" onclick="gen_s();" value="new shitpost" />
             <a id="tweet-button" class="button" target="_blank">tweet</a>
         </div>
+		<div id="shitpost-count"><span id="counter">0</span> shitposts generated</div>
     </body>
 </html>

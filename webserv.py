@@ -1,4 +1,5 @@
 from flask import Flask, request, send_from_directory
+import sqlite3
 import emoji
 app = Flask(__name__)
 
@@ -19,9 +20,11 @@ def generate_sentence(char):
 
 @app.route('/gen/c/')
 def get_count():
-    with open('gencount', 'r') as f:
-        count = f.read()
-    return count
+    con = sqlite3.connect('pasta.db')
+    c = con.cursor()
+    c.execute("SELECT COUNT(*) FROM counter")
+    count = c.fetchone()[0]
+    return str(count)
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=22109, debug=True)

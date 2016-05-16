@@ -1,10 +1,12 @@
 import markovify
+import sqlite3
 
 def addcount():
-    with open('gencount', 'r') as f:
-        count = int(f.read())
-    with open('gencount', 'w') as f:
-        f.write(str(count+1))
+    con = sqlite3.connect("pasta.db")
+    c = con.cursor()
+    c.execute("INSERT INTO counter VALUES (1)")
+    con.commit()
+    con.close()
 
 def generate(s=2):
     with open('corpus.txt') as f:

@@ -11,12 +11,18 @@
 				$("#tweet-button").attr('href', 'https://twitter.com/intent/tweet?text=' + data + '%0Avia http://emojipasta.club');
             });
 
+        }
+
+		function update_counter(){
 			//get shitpost count
 			$.get("gen/c/", function(data){
 				$("#counter").html(data);
 			});
-        }
+		}
+
+		setInterval(update_counter, 1000);
         gen_s();
+		update_counter();
         </script>
     </head>
     <body>

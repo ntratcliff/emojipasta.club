@@ -73,17 +73,3 @@ a.button:link, a.button:visited{
 		font-size: 3em;
 	}
 }
-
-/*
-EmojiSymbols Font (c)blockworks - Kenichi Kaneko
-http://emojisymbols.com/
-*/
-@font-face {
-    font-family: "EmojiSymbols";
-    src: url("/EmojiSymbols-Regular.woff") format('woff');
-}
-
-@font-face {
-    font-family: OpenSansEmoji;
-    src: url("/OpenSansEmoji.ttf");
-}

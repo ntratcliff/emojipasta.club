@@ -1,5 +1,5 @@
 # emojipasta.club
-[emojipasta.club](http://emojipasta.club/) is a web service that exposes RESTful endpoints for generating and tweeting emojipastas, as well as a simple frontend for generating and tweeting emojipasta sentences. 
+[emojipasta.club](http://emojipasta.club/) is a web service that exposes RESTful endpoints for generating emojipastas, as well as a simple frontend for generating and tweeting emojipasta sentences. 
 
 # How it works
 emojipasta.club uses [Markovify](https://github.com/jsvine/markovify) to generate a text model from a corpus of text scraped from [/r/emojipasta](https://reddit.com/r/emojipasta). 

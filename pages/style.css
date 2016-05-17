@@ -27,9 +27,17 @@ body{
 
 #shitpost-count{
 	position: absolute;
+	bottom: 1.4em;
+	width: 100%;
+	text-align: center;
+}
+
+#footer{
+	position: absolute;
 	bottom: 0.2em;
 	width: 100%;
 	text-align: center;
+	font-size: 0.8em;
 }
 
 .emoji-text{

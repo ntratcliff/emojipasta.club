@@ -4,7 +4,7 @@ import sqlite3
 def addcount():
     con = sqlite3.connect("pasta.db")
     c = con.cursor()
-    c.execute("INSERT INTO counter VALUES (1)")
+    c.execute("UPDATE counter SET int = int + 1")
     con.commit()
     con.close()
 

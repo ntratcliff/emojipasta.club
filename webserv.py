@@ -19,13 +19,13 @@ def generate_sentence(char):
     sentence = emoji.generate_sentence(char)
     if sentence is None:
         return ''
-    return emoji.generate_sentence(char)
+    return sentence 
 
 @app.route('/gen/c/')
 def get_count():
     con = sqlite3.connect('pasta.db')
     c = con.cursor()
-    c.execute("SELECT COUNT(*) FROM counter")
+    c.execute("SELECT * FROM counter")
     count = c.fetchone()[0]
     return str(count)
 
